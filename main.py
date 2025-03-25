@@ -4,6 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from sqlalchemy.orm import Session
 from database import SessionLocal, engine
 import crud, models
+import random
 
 models.Base.metadata.create_all(bind=engine)
 
@@ -27,8 +28,16 @@ def register(query: str, db: Session = Depends(get_db)):
 
 @app.get("/getImage")
 def get_image(query: str, db: Session = Depends(get_db)):
+    
+    crud.register_query(db, query)
     crud.add_timestamp(db, query)
-    return FileResponse("static/image.jpeg", media_type="image/jpeg")
+    
+    timestamps = crud.get_timestamps(db, query)
+    n = len(timestamps)
+    selected_image = "static/image.jpeg"
+    if n%5==0:
+        selected_image = random.choice(["static/sahaqueil.jpg", "static/sahaqueil_.jpg"])
+    return FileResponse(selected_image, media_type="image/jpeg")
 
 @app.get("/getData")
 def get_data(query: str, db: Session = Depends(get_db)):
