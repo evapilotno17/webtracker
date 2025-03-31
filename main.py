@@ -20,6 +20,12 @@ def get_db():
         yield db
     finally:
         db.close()
+        
+@app.get("/initdb")
+def init_db():
+    models.Base.metadata.create_all(bind=engine)
+    return {"status": "tables created"}
+
 
 @app.get("/register")
 def register(query: str, db: Session = Depends(get_db)):
