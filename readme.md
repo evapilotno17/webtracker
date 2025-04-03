@@ -3,3 +3,7 @@
 ## deployment: https://sahaquiel.onrender.com/
 ## db: https://console.neon.tech/app/projects/blue-glade-00638148?database=neondb
 
+## env: .\webtracker\Scripts\activate
+
+## deployment2: https://sahaquiel.fly.dev/
+## ????: 'hvxn8r9ai5cbt2jgfld1ws36muk7pe.4zqyo0'

@@ -1,0 +1,41 @@
+# fly.toml app configuration file generated for sahaquiel on 2025-04-01T06:11:49+05:30
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'sahaquiel'
+primary_region = 'bom'
+
+[build]
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+
+[env]
+DATABASE_URL="postgresql://neondb_owner:npg_aF6tGEhm8cRo@ep-quiet-hill-a5y8twr9-pooler.us-east-2.aws.neon.tech/neondb?sslmode=require"
+
+[experimental]
+allowed_public_ports = []
+auto_rollback = true
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+
+  [[services.ports]]
+    port = 443
+    handlers = ["tls", "http"]

@@ -3,6 +3,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from sqlalchemy.orm import Session
 from database import SessionLocal, engine
+from fastapi import Request
 import crud, models
 import random
 
@@ -21,6 +22,10 @@ def get_db():
     finally:
         db.close()
         
+@app.get("/")
+def root():
+    return {"God's in His heaven": "all's right with the world"}
+        
 @app.get("/initdb")
 def init_db():
     models.Base.metadata.create_all(bind=engine)
@@ -33,10 +38,20 @@ def register(query: str, db: Session = Depends(get_db)):
     return {"status": "registered"}
 
 @app.get("/getImage")
-def get_image(query: str, db: Session = Depends(get_db)):
+def get_image(query: str, request: Request, db: Session = Depends(get_db)):
+    forwarded_for = request.headers.get("x-forwarded-for")
+    ip = forwarded_for.split(",")[0].strip() if forwarded_for else request.client.host
+
+    request_metadata = {
+        "ip": ip,
+        "user_agent": request.headers.get("user-agent"),
+        "referer": request.headers.get("referer"),
+        "accept": request.headers.get("accept"),
+        "fly_region": request.headers.get("fly-region")
+    }
     
     crud.register_query(db, query)
-    crud.add_timestamp(db, query)
+    crud.add_timestamp(db, query, request_metadata)
     
     timestamps = crud.get_timestamps(db, query)
     n = len(timestamps)
@@ -47,5 +62,15 @@ def get_image(query: str, db: Session = Depends(get_db)):
 
 @app.get("/getData")
 def get_data(query: str, db: Session = Depends(get_db)):
-    timestamps = crud.get_timestamps(db, query)
-    return {"query": query, "timestamps": timestamps}
+    events = crud.get_timestamps(db, query)
+    return {
+        "query": query,
+        "events": events
+    }
+
+
+
+@app.get("/clearData")
+def clear_data(query: str, db: Session = Depends(get_db)):
+    success = crud.clear_data(db, query)
+    return {"status": "cleared" if success else "not found"}
