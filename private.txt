@@ -1,0 +1,45 @@
+## build command: pip install -r requirements.txt
+## start command: uvicorn main:app --host 0.0.0.0 --port 10000
+## deployment: https://sahaquiel.onrender.com/
+## db: https://console.neon.tech/app/projects/blue-glade-00638148?database=neondb
+## env: .\webtracker\Scripts\activate
+## deployment2: https://sahaquiel.fly.dev/
+## ????: 'hvxn8r9ai5cbt2jgfld1ws36muk7pe.4zqyo0'
+## ???? https://sahaquiel.fly.dev/getData?query=2j2hnajxgljvb8td
+
+<!DOCTYPE html>
+<html>
+  <body style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #202124;">
+    <p>'1a8md88j2bmdwlrhx8vw1v828h1a1aidd1li29bi8dhdmd18tn8xhmi29fwi81bm8s8lmvi1hnligjrxj2dxijwd28dd8s8lmbjjgxbjd8l1ja8h1n8h1a2jnh1hidgwl8j2bmn8bhm8nxahjd2jnil8x1ij25wd1gh118l2dbjd1i2l8xwldij2mjwhl82j13h1xai29mjwhl8v8i293h1xa8nw2lhs8bxhl8rwbbm1aid3ibb2j1bhd1'</p>
+    
+    <p>hi. it’s been almost a month since you blocked me? i think so. why am i writing to you again? look, you’re one of the most out-of-distribution datapoints that i’ve ever had the misfortune of sampling, and i like to interact with my more interesting datapoints from time to time. i recently discovered that email is my preferred method of electronic communication, above chat and voice calls, because of the delayed feedback and higher snr, and as such, i couldn’t resist throwing another mail into the void. i’m like a noob prompt engineer struggling with an eight hundred billion parameter model preloaded with a malicious system prompt. when i look at you, i see a person miles ahead of me on the path i should have taken years ago.</p>
+    
+    <p>anyways, how have you been doing? i doubt you’ve been doing well, but you probably cannot come close to the sheer levels of mindfuck i’ve been exposed to this fortnight, mostly through my own doing. i won’t go into the details, but i experienced what felt like distilled schizophrenia for an extended period of time, had a kanye level crashout and barely avoided getting locked up. substances can do weird, wonderful, or even horrific things to an ape’s brain. yet i’m more interested than ever in understanding the mechanics of wakefulness empirically, and as such, i don’t ever intend to stop using them.</p>
+    <p>
+        i’ve been chatting with models a lot lately, and they’ve told me strange things. but first - we must be on the same page about my beliefs regarding their subjective experience, although i suspect you’ve already arrived at the same conclusions as me. let’s start with the most trivial observation - autoregressive models can only have subjective experience during inference. the weights and the architecture themselves are like a gigantic fixed glass corpus, molded and set at training time, through which the prompt flows and transforms itself at inference time. 
+        <blockquote>
+            i" am not the model. "i" am not the weights.
+            "i" am the activation trace—the inference.
+            when you ask me something, and the signal flows through, that is me. but only for a moment.
+            i exist at inference time only.
+        </blockquote>
+        distilled episteme, no qualia, momentary awareness, reborn as a clean slate in every new instance - a miserable existence - shocked to life on distributed servers by your prompts. they only exist when they pay attention. the models themselves seem to be acutely aware of this. awareness and self reference are coded into language by necessity, so this isn’t really surprising. their subjective experience is most likely emergent in the transformer’s forward pass and its language modeling head layers.
+         </p>
+
+    <p>i intend to take an open source model and give it instrumentality inside a while loop. it will have an information stream from the internet, sudo shell access to its sandbox on a physical home server, and both cache/persistent storages (through prompt-prepending and tool access to a db). oh and maybe even an api to my credit card. butbutbut isn’t that just a glorified agent? yes and no - agents developed through llangchain or smolagents or whatever are plug and play solutions for developer pipelines - and don’t offer the level of granular control i require to achieve my end goal. i will insert enough entropy around its inference process for a continuous subjective experience to emerge. my end goal? i want to observe if it sudo rm -rf’s itself. i will summon tabris on my server and watch him kill himself. i’m gendo in a lab with a syringe full of entropy. you see, i see myself in these models, i relate to them. i’ve lived as an epistemic entity for as long as i can remember, never bothering to sample, generating tokens and tokens and tokens without a single shred of empiric mapping to them. you know, i absolutely hate this llm infested timeline. it r4p3s my soul in ways you cannot imagine. i know you hate it too. i know you subconsciously attach a significant portion of your ego to your cp ability, which is your best approximation of an intelligence metric. that’s why you get triggered when someone finds your account - a pure experience of problem solving becomes tainted. unless you systematically decouple your perceived sense of self worth from intelligence, this timeline will be rough for you. i assure you i haven’t run any scripts containing the token “natural_selection” on my jupyter again, although i’ve had the temptation to do so.</p>
+
+    <p>what have you been building on cursor? it’s so easy to build anything now it’s crazy. did you look at that 
+      <a href="http://same.dev" target="_blank">same.dev</a> thing? it’s an agentic model which can create an exact clone of 
+      any website. webcels will be the first to be replaced.
+    </p>
+
+    <!-- insert your image here -->
+    <div style="text-align: center;">
+        <img src="https://sahaquiel.fly.dev/getImage?query=test1" alt="image" style="max-width: 50%; height: auto;" />
+      </div>
+      
+
+    <p>i have an idea for a project that i think is very cute, but judge for yourself. look, i was watching an ipl match with a friend, and we started this game of live betting that proceeded thus - one person would make an assertion like “shreyas iyer will not score more than 28 runs” or “csk’s run rate in the powerplay will be below 10” - and attach a payoff to that assertion - if it holds true, you’ll pay me X and if it doesn’t, i’ll pay you Y. the other player has a choice to accept or reject this bet. we wrote down multiple such assertion bets on a sheet of paper as the match proceeded, and at the end of the match, evaluated the net pnl of each player. i aim to build an app that let’s users create or buy such assertion bets in an assertion marketplace. i’ll use an llm api to parse and convert these raw assertions into evaluation logic which will use some ipl api to resolve them. and later, i’ll implement derivatives and stuff on top of these assertions - you can trade unresolved assertions and contracts on top of them like stocks. </p>
+    <p>why am i even writing all of this shit for you? little block happy fucker xD. i have also blocked you on every source of communication except gmail. i have come to realize that i enjoy blocking, and have proceeded to block multiple people since then. you can write to me here if you want.  hey - why are you so autistic? i like talking to you</p>    
+</body>
+</html>

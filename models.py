@@ -1,9 +1,11 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
-from datetime import datetime
 from database import Base
 from sqlalchemy import Column, Integer, ForeignKey, DateTime, JSON
-from datetime import datetime
+import pytz
+import datetime
+
+india = pytz.timezone("Asia/Kolkata")
 
 
 class QueryEntry(Base):
@@ -16,7 +18,7 @@ class QueryEntry(Base):
 class TimestampEntry(Base):
     __tablename__ = "timestamps"
     id = Column(Integer, primary_key=True, index=True)
-    timestamp = Column(DateTime, default=datetime.utcnow)
+    timestamp = Column(DateTime, default=lambda: datetime.now(india))
     query_id = Column(Integer, ForeignKey("queries.id"))
     request_metadata = Column(JSON, nullable=True)
 
